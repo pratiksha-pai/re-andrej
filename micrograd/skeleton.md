@@ -22,4 +22,17 @@ why is this approach better? (works on a comp better than using direct math/a fu
 - what is gradient check? 
 - addition routes the gradient from parents to children whereas mult swaps then gradients with the node value of the other child 
 - mult kinda couples the children together, addition doesn't (couples the gradients not the nodes?)
+- when you nudge the variable in the direcion of the gradient the function value increases, why because the definition - gradient is rate of change of function with increase in variable
+- (learn a little about why hyperbolic function were created? and why they have such weird derivatives, for lols)
+- what does autograd mean btw?
+- gradient of the function also gives the direction of steepest ascent, why? because the gradient is the direction of the fastest increase of the function
+- write out the expression graph for o = tanh(x1w1 + x2w2 + b) and then write out the gradients for each of the variable, show it in the draw dot
+- at any point in the computation graph, the gradient is local gradient * gradient of the parent node (chain rule)
+- (check how pytorch does this, how does it store the gradients? how does it store the computation graph? how does it calculate the gradients?)
+- at this point you need to write out what will be the _backward function for __add__, __mul__, tanh, also note that at no point are we doing something like z = 2x + y etc, here 2 would add additional factor
+- so what _backward does here is *push* the gradients to the children, ofcourse it makes sure the children contrubute as well, such a sweet(?) parent
+- at this point you'd have to call the _backward function manually for each node
+- how do you automate it?
+- you need to create a function that does a topological sort on the graph and calls the _backward function on each node
+- why topo sort - cuz you'd want the edges to be traversed in one direction. (side note: please study graph theory again)
 - 
