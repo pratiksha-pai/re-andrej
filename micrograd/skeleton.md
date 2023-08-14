@@ -44,5 +44,15 @@ why is this approach better? (works on a comp better than using direct math/a fu
 - instead of division, we implement x ** k, youd implement __pow__ at this point and also have a backward function here
 - basically every function until now will have _backward function in it
 - subtraction - implement sub = add of neg
-- 
+- at this point get a feel of what pytorch does. we are going to use pytorch and cast it into double, we need to make requires_grad = True for the variables
+- diff between o.item() vs o.data.item()
+- learn what zip() does, seems to be used in multiple leetcodes as well
+- what is activation function? it is a function that takes in a weighted sum of the inputs and outputs a value between 0 and 1
+- initialise a Neuron, Layer and a MLP using Pytorch
+- example x = [2,3,-1] n = MLP(3, [4, 4,1]); use this to construct the MLP
+- oh looks like +, - etc of a pytorch tensor with a float return tensor - does this have cummulative property?
+- why do we generally use MSE loss? because it is differentiable and convex - why not somehting else?
+- draw this loss, this is so crazy
+-  not only weight, but also biases can be updated - i think i knew this, but i forgot
+- we need the loss function to decrease, not increase, hence we need to nudge the weights in the opposite direction of the gradient
 - 
