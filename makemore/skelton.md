@@ -1,0 +1,9 @@
+# hello again, we are going to build out makemore yay 
+- get words from txt file, load it into an array 
+- using bigram model, add a start and end token for each of these words
+- youd use map inorder to sort it out in decreasing order - the bigrams 
+- or beter yet use a 2d array, with row as first char and column as second char
+- youd need function like stoi and itos to convert from string to int and vice versa
+- 2d indexing for tensor looks like x[0, 0] rather than x[0][0]
+- plt.text to plot out the text in the graph - for bigram to see the most common bigrams
+- how to get probability of a word given a previous word? p/p.sum() for every row basically
