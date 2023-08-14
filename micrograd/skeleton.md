@@ -35,4 +35,14 @@ why is this approach better? (works on a comp better than using direct math/a fu
 - how do you automate it?
 - you need to create a function that does a topological sort on the graph and calls the _backward function on each node
 - why topo sort - cuz you'd want the edges to be traversed in one direction. (side note: please study graph theory again)
+- write the topo sort algo by yourself plis, also reversed topo - how is this a unique list? it shouldnt be?
+- at this point you need to write an actual backward function inside the class to call topo and apply backward on the output node
+- if variable is used more than once, you need to add the gradients, otherwise you'd rewrite it. how would you figure this out? why does this work? because you have accumulative effects on the computational graph when you use the same variable multiple times
+- multivariate grads
+- wrapping other in the Value, using __rmul__ and __radd__ to make sure that the Value is always on the left side of the operator
+- hmmm now we break down tanh into exp components and write backward for it 
+- instead of division, we implement x ** k, youd implement __pow__ at this point and also have a backward function here
+- basically every function until now will have _backward function in it
+- subtraction - implement sub = add of neg
+- 
 - 
