@@ -69,3 +69,6 @@ why is this approach better? (works on a comp better than using direct math/a fu
 - what is binary op? gets two inputs and returns one output? 
 - this is cool = https://pytorch.org/tutorials/beginner/examples_autograd/two_layer_net_custom_function.html
 - wohooooo done, now go code this :shrug:
+- von Neumann bottleneck - https://en.wikipedia.org/wiki/Von_Neumann_architecture#Von_Neumann_bottleneck 
+- emulation mode = https://en.wikipedia.org/wiki/Emulation_(computing)
+- also learn what are analog computers and how they work - why? lols
