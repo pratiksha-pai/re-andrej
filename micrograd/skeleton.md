@@ -53,6 +53,19 @@ why is this approach better? (works on a comp better than using direct math/a fu
 - oh looks like +, - etc of a pytorch tensor with a float return tensor - does this have cummulative property?
 - why do we generally use MSE loss? because it is differentiable and convex - why not somehting else?
 - draw this loss, this is so crazy
--  not only weight, but also biases can be updated - i think i knew this, but i forgot
+- not only weight, but also biases can be updated - i think i knew this, but i forgot
 - we need the loss function to decrease, not increase, hence we need to nudge the weights in the opposite direction of the gradient
-- 
+- vector of the gradient points in the direction of th steepest ascent. (can you visualise this for a 2d function?)
+- forward pass, backward pass, update weights, repeat, hah - this is called gradient descent
+- self.grad = 0.0, you call n(x) multiple times right, - undestand here when the __init__ function is called? is it called multiple times? more of a python question
+- so in the first layer you'd have inputs and weights, how are they shown in draw dot? also how are weights etc of the next few layers shown? visualise this ans see where the weights are stored
+- stocastic gradient descent, mse vs cross entropy
+- write out tanh, sigmoid and relu non linearties and their backwards
+- use similar str as andrej, make it a module and use it in the main file
+- nn.Module class in pytorch, just look over and see if there is anything interesting, micrograd has this
+- write out a similar test engine as him cuz he is a genius and you prolly will get some idea from it
+- crazy he used the micrograd engine to do some complex bin classification and it worked like a charm, again do this for lols
+- he has used L2 regularization, and done learning rate decay 
+- what is binary op? gets two inputs and returns one output? 
+- this is cool = https://pytorch.org/tutorials/beginner/examples_autograd/two_layer_net_custom_function.html
+- wohooooo done, now go code this :shrug:
