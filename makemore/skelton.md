@@ -7,3 +7,7 @@
 - 2d indexing for tensor looks like x[0, 0] rather than x[0][0]
 - plt.text to plot out the text in the graph - for bigram to see the most common bigrams
 - how to get probability of a word given a previous word? p/p.sum() for every row basically
+- how to sample from a multinomial diistribution
+-  clear out why we get diff answers for the same seed, [here](https://youtu.be/PaCmpygFfXo?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&t=2036)
+- how does multinomial distribution work?
+- oh i think you need to follow the lecture while coding babe, i dont exactly know how to write out this skeleton here, ok bye, doing micrograd now
