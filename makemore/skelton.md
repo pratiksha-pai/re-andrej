@@ -9,5 +9,12 @@
 - how to get probability of a word given a previous word? p/p.sum() for every row basically
 - how to sample from a multinomial diistribution
 -  clear out why we get diff answers for the same seed, [here](https://youtu.be/PaCmpygFfXo?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&t=2036)
+- this answer is funny, its because your multinomial distr picks out the next item (depending on previous item?), you can think f it as line of bunch of numbers that follow each other, and your generator defines at which point you'd want to start from (am i right?, check resources to clarify this) - but its random distri right? you should not be able to predict the next number, check this out
 - how does multinomial distribution work?
-- oh i think you need to follow the lecture while coding babe, i dont exactly know how to write out this skeleton here, ok bye, doing micrograd now
+- why did they make broadcasting rules such that they are aligned on the right?
+- at this point you are kinda picking stuff from the probability distributon of the bigram model, and using a multinomial distribution to pick the next word
+- what is multinomial distribution? it is a generalization of binomial distribution, where you have more than 2 outcomes
+- maximum likelihood is product of all the probabilities of the words given the previous word
+- check out fstrings btw
+- how would you train the NN on top of it now? you use the probabiltites of the bigram model as the target, and the NN would try to predict the next word given the previous word
+- gradient based optimization - is a fancy way of saying that you are trying to find the best parameters for your model, by using the gradient of the loss function
