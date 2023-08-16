@@ -1,0 +1,6 @@
+- apparently __repr__ does not print, it returns
+- couple of things to note, the children and op are populated when you are actually doing an __add__ and __mul__ operation, makes sense, it cant be populated during __init__ because there is no linkage at this point
+- there was one bug that gave str object does not have _prev, because i had wrapped Value(1.0, 'a'), here the children were taken as 'a', muhaha
+- i noticed how you apply out.backward and self.grad is changed, ex check the _backward function in __add__, do you understand this intuitively? gpt4 this
+- simple nodes, _ = trace(L); this does not work because you need topo sort for node.backward() to work
+- 

@@ -18,7 +18,7 @@ why is this approach better? (works on a comp better than using direct math/a fu
 - at this point you'd need self.grad to store the gradient of the current node (gradient of the current node wrt to the last node)
 - (YOU HAVE A PRESENTATION DUE TOMO, STOP WATCHING LECTURES PLIS)
 - skip the manual part of creating the grad on your own and write the code for it
-- oooo mult swaps the grad values of children to the node value, why? use function xy to visualise this
+- oooo mult swaps the grad values of children to the node value, why? use function xy to visualise this - TODO
 - what is gradient check? 
 - addition routes the gradient from parents to children whereas mult swaps then gradients with the node value of the other child 
 - mult kinda couples the children together, addition doesn't (couples the gradients not the nodes?)
