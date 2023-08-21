@@ -1,0 +1,12 @@
+### wavenet
+- learn the broadcasting rules of torch 
+- list [::2] - even elements, list [1::2] - odd elements
+- how does view work in pytorch? - it is similar to reshape in numpy, learn how the arranging happens for 3d -> 3d
+- // is integer division - 10//3=3
+- squeeze - removes all the dimensions that have a size of 1, unsqueeze - adds a dimension of size 1, you can explicitly mention the dimension to be added
+- what is wavenet? archive link: https://arxiv.org/pdf/1609.03499.pdf
+- what is wavenet defined as? - it is a causal dilated convolutional neural network
+- why is cnn better than wavenet? - because cnn is parallelisable and wavenet is not, multiple intermediate steps are recalculated in wavenet
+- torch.nn is a module that uses torch.tensor as input and output
+- convnet
+- 

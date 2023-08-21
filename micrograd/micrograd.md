@@ -1,0 +1,25 @@
+- micrograd is an autograd engine
+- what is autograd? it's a way to automatically compute derivatives of functions
+- why is that useful? because it lets you write code that computes derivatives of functions without having to write the derivatives yourself
+- backpropagation is a way to compute derivatives of functions
+- slope = rise/run
+- graphviz is a tool to draw graphs, it's useful for visualizing backpropagation
+- chain rule in calculus is a way to compute derivatives of functions
+d/dx f(g(x)) = f'(g(x)) * g'(x)
+- [NOTE] in order to increase the value of a given function we need to go in the direction of the gradient of that function
+- gradient of the function also gives the direction of steepest ascent, why? because the gradient is the direction of the fastest increase of the function
+- why is activation function important? because it introduces non-linearity to the network
+- why is non-linearity important? because it allows the network to learn non-linear functions
+- why is activation function a squashing function? because it squashes the input to a range between 0 and 1. why is that useful? because it allows us to interpret the output as a probability
+- plus distributes gradients equally to all its inputs
+- layer of neurons are a list of neurons tht are not connected to eah other but connected to the previous layer of neurons
+- in pytorch, everything is a tensor
+- a tensor is a multi-dimensional array, a generalization of a matrix
+- how is a tensor different from a matrix? a tensor can have more than 2 dimensions
+- __call__ function for a Neuron 
+- zip = takes two iterators and returns an iterator of tuples
+- MLP - multi-layer perceptron, a neural network with more than one layer, where each layer has multiple neurons
+- in order to minimise the loss function we need to go in the opposite direction of the gradient of the loss function because the gradient of the loss function gives the direction of steepest ascent (that is increasing the loss function)
+- loss function accounts for loss on every single data point because its a MSE loss and not just simple addition 
+- zero grad is used to reset the gradients to zero, need to be done before every backpropagation
+- cross entropy loss is used for classification problems, what is cross entropy loss? it's a loss function that measures the performance of a classification model whose output is a probability between 0 and 1
