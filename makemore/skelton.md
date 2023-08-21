@@ -1,0 +1,20 @@
+# hello again, we are going to build out makemore yay 
+- get words from txt file, load it into an array 
+- using bigram model, add a start and end token for each of these words
+- youd use map inorder to sort it out in decreasing order - the bigrams 
+- or beter yet use a 2d array, with row as first char and column as second char
+- youd need function like stoi and itos to convert from string to int and vice versa
+- 2d indexing for tensor looks like x[0, 0] rather than x[0][0]
+- plt.text to plot out the text in the graph - for bigram to see the most common bigrams
+- how to get probability of a word given a previous word? p/p.sum() for every row basically
+- how to sample from a multinomial diistribution
+-  clear out why we get diff answers for the same seed, [here](https://youtu.be/PaCmpygFfXo?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&t=2036)
+- this answer is funny, its because your multinomial distr picks out the next item (depending on previous item?), you can think f it as line of bunch of numbers that follow each other, and your generator defines at which point you'd want to start from (am i right?, check resources to clarify this) - but its random distri right? you should not be able to predict the next number, check this out
+- how does multinomial distribution work?
+- why did they make broadcasting rules such that they are aligned on the right?
+- at this point you are kinda picking stuff from the probability distributon of the bigram model, and using a multinomial distribution to pick the next word
+- what is multinomial distribution? it is a generalization of binomial distribution, where you have more than 2 outcomes
+- maximum likelihood is product of all the probabilities of the words given the previous word
+- check out fstrings btw
+- how would you train the NN on top of it now? you use the probabiltites of the bigram model as the target, and the NN would try to predict the next word given the previous word
+- gradient based optimization - is a fancy way of saying that you are trying to find the best parameters for your model, by using the gradient of the loss function
