@@ -1,1 +1,5 @@
 */.ipynb_checkpoints
+.DS_Store
+translations/.DS_Store
+translations/unity*
+translations/andrej_*
