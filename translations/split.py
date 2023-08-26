@@ -1,3 +1,5 @@
+# splitting into chunks so its manageable 
+#!pip install pydub
 from pydub import AudioSegment
 
 def split_wav(file_name):
