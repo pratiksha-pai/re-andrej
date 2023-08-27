@@ -3,3 +3,5 @@
 translations/.DS_Store
 translations/unity*
 translations/andrej_*
+translations/chunks/*
+translations/multitask_unity_large.pt

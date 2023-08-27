@@ -4,11 +4,11 @@ import torch
 
 torch.autograd.set_detect_anomaly(True)
 
-# def chunk_audio(audio, chunk_size):
-#     num_samples = audio.shape[1]
-#     num_chunks = num_samples // chunk_size
-#     chunks = [audio[:, i*chunk_size:(i+1)*chunk_size] for i in range(num_chunks)]
-#     return chunks
+def chunk_audio(audio, chunk_size):
+    num_samples = audio.shape[1]
+    num_chunks = num_samples // chunk_size
+    chunks = [audio[:, i*chunk_size:(i+1)*chunk_size] for i in range(num_chunks)]
+    return chunks
 
 os.environ['PYTORCH_ENABLE_MPS_FALLBACK'] = '1'
 torch.backends.cudnn.enabled = False
@@ -33,19 +33,19 @@ else:
         audio_input, _ = torchaudio.load(TEST_AUDIO_PATH)
         print(f"Audio file successfully loaded. Shape: {audio_input.shape}")
 
-        # audio_chunks = chunk_audio(audio_input, CHUNK_SIZE)
+        audio_chunks = chunk_audio(audio_input, CHUNK_SIZE)
 
-        s2st_model = torch.jit.load("multitask_unity_large.pt").to(device)
+        s2st_model = torch.jit.load("unity_on_device.ptl").to(device)
         
         output_texts = []
         output_waveforms = []
         with torch.no_grad():
-            # for audio_chunk in audio_chunks:
-            
-            print(f"Debug: Chunk shape: {audio_input.shape}, Chunk type: {audio_input.dtype}")  
-            text, units, waveform = s2st_model(audio_input.to(device), tgt_lang=TGT_LANG)
-            output_texts.append(text)
-            output_waveforms.append(waveform)
+            for audio_chunk in audio_chunks:
+                
+                print(f"Debug: Chunk shape: {audio_chunk.shape}, Chunk type: {audio_chunk.dtype}")  
+                text, units, waveform = s2st_model(audio_chunk.to(device), tgt_lang=TGT_LANG)
+                output_texts.append(text)
+                output_waveforms.append(waveform)
                 
         # Concatenate outputs if necessary
         final_text = ' '.join(output_texts)

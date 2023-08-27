@@ -5,7 +5,7 @@ from pydub import AudioSegment
 def split_wav(file_name):
     audio = AudioSegment.from_wav(file_name)
     length_audio = len(audio)
-    half_an_hour = 5 * 60 * 1000 # 30 minutes in milliseconds
+    half_an_hour = 1 * 60 * 1000 # 30 minutes in milliseconds
 
     for i in range(0, length_audio, half_an_hour):
         split_audio = audio[i:i+half_an_hour]
