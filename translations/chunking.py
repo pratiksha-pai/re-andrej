@@ -17,7 +17,7 @@ def save_and_play_audio(path_save, audio, sample_rate):
     audio_play = Audio(path_save, rate=sample_rate, autoplay=True, normalize=True)
     display(audio_play)
 
-def split_audio_with_max_duration(input_file, output_directory, min_silence_len=2500, silence_thresh=-60, max_chunk_duration=60000):
+def split_audio_with_max_duration(input_file, output_directory, min_silence_len=2500, silence_thresh=-60, max_chunk_duration=120000):
 
     sound = AudioSegment.from_wav(input_file)
 
@@ -49,7 +49,7 @@ def split_audio_with_max_duration(input_file, output_directory, min_silence_len=
         print("Exporting file", output_file)
         chunk.export(output_file, format="wav")
 
-for i in range(22):
+for i in range(3):
     input_audio_file = f"/home/hice1/ppai33/scratch/sliced_audio/slice_{i}.wav"
     output_directory = f"/home/hice1/ppai33/scratch/output/slice_{i}"
 
